@@ -2,17 +2,15 @@
 #define SQUARE_H
 
 #include "Shape.h"
-#include "Point.h" // Ensure this is included for the Point class
+#include "Point.h" 
 
 class Square : public Shape {
 private:
     double side_a;
 
 public:
-    // Existing constructor
     Square(const Point& p, const char* name, double side_a);
 
-    // New constructor
     Square(int x, int y, double side_a, const char* name);
 
     double area() const;
@@ -25,4 +23,4 @@ public:
     void display() const;
 };
 
-#endif // SQUARE_H
+#endif 

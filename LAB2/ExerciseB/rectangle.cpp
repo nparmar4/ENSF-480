@@ -4,11 +4,9 @@
 #include <cmath>
 using namespace std;
 
-// Constructor that initializes its data members
 Rectangle::Rectangle(const Point& p, const char* name, double side_a, double side_b)
     : Square(p, name, side_a), side_b(side_b) {}
 
-// New constructor with integer coordinates
 Rectangle::Rectangle(int x, int y, double side_a, double side_b, const char* name)
     : Square(x, y, side_a, name), side_b(side_b) {}
 

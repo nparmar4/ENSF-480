@@ -1,3 +1,12 @@
+/*
+* File Name: lab2exe_B.c
+* Assignment: Lab 2 Exercise B
+* Lab Section: B01
+* Completed by: Neha Parmar, Shahed Issa
+* Submission Date: Sept 15, 2024
+*/
+
+
 #include <iostream>
 #include "GraphicsWorld.h"
 #include "Point.h"
