@@ -2,7 +2,11 @@
 #include "GraphicsWorld.h"
 #include "Point.h"
 
-
+int main() {
+    GraphicsWorld gw;
+    gw.run();
+    return 0;
+}
 void GraphicsWorld::run() {
     // Change 0 to 1 to test Point
     #if 1
@@ -16,14 +20,14 @@ void GraphicsWorld::run() {
     #endif // end of block to test Point
 
     // Change 0 to 1 to test Square
-    #if 0
+    #if 1
     std::cout << "\n\nTesting Functions in class Square:" << std::endl;
     Square s(5, 7, 12, "SQUARE - S");
     s.display();
     #endif // end of block to test Square
 
     // Change 0 to 1 to test Rectangle
-    #if 0
+    #if 1
     std::cout << "\nTesting Functions in class Rectangle:";
     Rectangle a(5, 7, 12, 15, "RECTANGLE A");
     a.display();
@@ -76,7 +80,7 @@ void GraphicsWorld::run() {
     #endif // end of block to test Rectangle
 
     // Change 0 to 1 to test using array of pointers and polymorphism
-    #if 0
+    #if 1
     std::cout << "\nTesting array of pointers and polymorphism:" << std::endl;
     Shape* sh[4];
     sh[0] = &s;
