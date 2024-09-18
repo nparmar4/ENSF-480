@@ -10,6 +10,8 @@ private:
 
 public:
     Shape(const Point& p, const char* name);
+    Shape(const Shape& other);
+    Shape& operator=(const Shape& rhs);
 
     ~Shape();
 

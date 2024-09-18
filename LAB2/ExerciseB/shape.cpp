@@ -4,14 +4,34 @@
 #include <cmath>
 using namespace std;
 
+//contructor
 Shape::Shape(const Point& p, const char* name) : origin(p) {
     shapeName = new char[strlen(name) + 1];
     strcpy(shapeName, name);
 }
 
+//Copy contructor
+Shape::Shape(const Shape& other) : origin(other.origin){
+    shapeName = new char[strlen(other.shapeName)+1];
+    strcpy(shapeName, other.shapeName);
+}
+
+//assignment operator
+Shape& Shape::operator=(const Shape& rhs){
+    if (this != &rhs){
+        origin = rhs.origin;
+        delete[] shapeName;
+
+        shapeName = new char[strlen(rhs.shapeName)+1];
+        strcpy(shapeName, rhs.shapeName);
+
+    }
+}
+
 Shape::~Shape() {
     delete[] shapeName;
 }
+
 
 const Point& Shape::getOrigin() const {
     return origin;
@@ -27,16 +47,15 @@ void Shape::display() const {
     cout << "Y-coordinate: " << origin.gety() << endl;
 }
 
+
 double Shape::distance(const Shape& other) const {
-    double dx = origin.getx() - other.origin.getx();
-    double dy = origin.gety() - other.origin.gety();
-    return std::sqrt(dx * dx + dy * dy);
+    return Point::distance(this->origin, other.origin);
 }
 
+
 double Shape::distance(const Shape& shape1, const Shape& shape2) {
-    double dx = shape1.origin.getx() - shape2.origin.getx();
-    double dy = shape1.origin.gety() - shape2.origin.gety();
-    return std::sqrt(dx * dx + dy * dy);
+    return Point::distance(shape1.origin, shape2.origin);
+    
 }
 
 void Shape::move(double dx, double dy) {

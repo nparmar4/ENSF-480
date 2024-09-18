@@ -5,13 +5,15 @@
 #include "Point.h" 
 
 class Square : public Shape {
-private:
+protected:
     double side_a;
 
 public:
     Square(const Point& p, const char* name, double side_a);
+    Square(const Square& other);
+    Square& operator=(const Square& rhs);
 
-    Square(int x, int y, double side_a, const char* name);
+    ~Square();
 
     double area() const;
 

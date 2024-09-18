@@ -7,8 +7,18 @@ using namespace std;
 Rectangle::Rectangle(const Point& p, const char* name, double side_a, double side_b)
     : Square(p, name, side_a), side_b(side_b) {}
 
-Rectangle::Rectangle(int x, int y, double side_a, double side_b, const char* name)
-    : Square(x, y, side_a, name), side_b(side_b) {}
+Rectangle::Rectangle(const Rectangle& other) : Square(other), side_b(other.side_b) {
+}
+
+Rectangle& Rectangle::operator=(const Rectangle& rhs) {
+    if (this != &rhs) {
+        Square::operator=(rhs);
+        side_b = rhs.side_b;
+    }
+    return *this;
+}
+
+Rectangle::~Rectangle() {}
 
 double Rectangle::area() const {
     return get_side_a() * side_b;

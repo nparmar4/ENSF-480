@@ -2,7 +2,6 @@
 #define RECTANGLE_H
 
 #include "Square.h"
-#include "Shape.h"
 
 class Rectangle : public Square {
 private:
@@ -10,8 +9,10 @@ private:
 
 public:
     Rectangle(const Point& p, const char* name, double side_a, double side_b);
+    Rectangle(const Rectangle& other);
+    Rectangle& operator=(const Rectangle& rhs);
 
-    Rectangle(int x, int y, double side_a, double side_b, const char* name);
+    ~Rectangle();
 
     double area() const;
 
