@@ -11,6 +11,8 @@ int main() {
 }
 
 void GraphicsWorld::run() {
+    std::cout << "made by Neha Parmar and Shahed Issa";
+
     // Change 0 to 1 to test Point
     #if 1
     Point m(6, 8);
