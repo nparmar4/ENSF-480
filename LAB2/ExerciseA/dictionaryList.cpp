@@ -1,8 +1,9 @@
-// lookuptable.cpp
-
-// ENSF 480 - Lab 2 - Exercise A
- 
-// Completed by:
+/*
+ *File Name: Human.cpp
+ * Assignment: Lab 1 Exercise A
+ * Completed by: Shahed Issa and Neha Parmar
+ * Submission Date: Sept 19, 2024
+ */
 
 #include <assert.h>
 #include <iostream>
