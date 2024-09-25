@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/nehap/Desktop/ENSF-480/LAB3/ExerciseA",
-      "program": "c:/Users/nehap/Desktop/ENSF-480/LAB3/ExerciseA/build/Debug/outDebug",
+      "cwd": "c:/Users/nehap/Desktop/ENSF-480/LAB2/ExerciseB",
+      "program": "c:/Users/nehap/Desktop/ENSF-480/LAB2/ExerciseB/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
