@@ -4,11 +4,27 @@
 #include <cmath>
 using namespace std;
 
+//constructor
 Square::Square(const Point& p, const char* name, double side_a)
     : Shape(p, name), side_a(side_a) {}
 
-Square::Square(int x, int y, double side_a, const char* name)
-    : Shape(Point(x, y), name), side_a(side_a) {}
+//copy constrcutor
+Square::Square(const Square& other) : Shape(other), side_a(other.side_a) {
+
+}
+
+//assignment operator
+Square& Square::operator=(const Square& rhs) {
+    if (this != &rhs) {
+        Shape::operator=(rhs);
+        side_a = rhs.side_a;
+    }
+    return *this;
+}
+
+//destructor:
+Square::~Square() {
+}
 
 double Square::area() const {
     return side_a * side_a;

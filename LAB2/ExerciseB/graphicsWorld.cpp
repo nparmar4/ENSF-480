@@ -1,22 +1,18 @@
-/*
-* File Name: lab2exe_B.c
-* Assignment: Lab 2 Exercise B
-* Lab Section: B01
-* Completed by: Neha Parmar, Shahed Issa
-* Submission Date: Sept 15, 2024
-*/
-
-
 #include <iostream>
 #include "GraphicsWorld.h"
 #include "Point.h"
+#include "Square.h"
+#include "Rectangle.h"
 
 int main() {
     GraphicsWorld gw;
     gw.run();
     return 0;
 }
+
 void GraphicsWorld::run() {
+    std::cout << "made by Neha Parmar and Shahed Issa";
+
     // Change 0 to 1 to test Point
     #if 1
     Point m(6, 8);
@@ -31,17 +27,20 @@ void GraphicsWorld::run() {
     // Change 0 to 1 to test Square
     #if 1
     std::cout << "\n\nTesting Functions in class Square:" << std::endl;
-    Square s(5, 7, 12, "SQUARE - S");
+    Point p1(5, 7);  // Create a Point object for Square constructor
+    Square s(p1, "SQUARE - S", 12);
     s.display();
     #endif // end of block to test Square
 
     // Change 0 to 1 to test Rectangle
     #if 1
     std::cout << "\nTesting Functions in class Rectangle:";
-    Rectangle a(5, 7, 12, 15, "RECTANGLE A");
+    Point p2(5, 7);  // Create Point object for Rectangle constructor
+    Rectangle a(p2, "RECTANGLE A", 12, 15);
     a.display();
     
-    Rectangle b(16, 7, 8, 9, "RECTANGLE B");
+    Point p3(16, 7);  // Create Point object for another Rectangle
+    Rectangle b(p3, "RECTANGLE B", 8, 9);
     b.display();
     
     double d = a.distance(b);
@@ -51,7 +50,8 @@ void GraphicsWorld::run() {
     rec1.display();
     
     std::cout << "\nTesting assignment operator in class Rectangle:" << std::endl;
-    Rectangle rec2(3, 4, 11, 7, "RECTANGLE rec2");
+    Point p4(3, 4);  // Create Point object for another Rectangle
+    Rectangle rec2(p4, "RECTANGLE rec2", 11, 7);
     rec2.display();
     rec2 = a;
     
