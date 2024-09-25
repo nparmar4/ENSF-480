@@ -1,5 +1,9 @@
-// dictionaryList.h
-// ENSF 480 - Lab 2 - Exercise A
+/*
+ *File Name: Human.cpp
+ * Assignment: Lab 1 Exercise A
+ * Completed by: Shahed Issa and Neha Parmar
+ * Submission Date: Sept 19, 2024
+ */
 
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
