@@ -1,5 +1,6 @@
 // iterator.cpp
 // ENSF 480 - Fall 2022 - Lab 3, Ex B
+// Authors - Neha Parmar & Shahed Issa
 
 #include <iostream>
 #include <assert.h>
