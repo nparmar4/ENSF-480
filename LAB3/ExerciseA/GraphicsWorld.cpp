@@ -102,51 +102,6 @@ void GraphicsWorld::run() {
     sh[3]->display();
     #endif // end of block to test array of pointers and polymorphism
 
-#if 0
-    std::cout << "\nTesting Functions in class Circle:" << std::endl;
-    Point circlePoint(3, 5); // Create a Point object for Circle constructor
-    Circle c(circlePoint, 9, "CIRCLE C"); // Adjusted to match constructor
-    c.display();
-    std::cout << "The area of " << c.getName() << " is: " << c.area() << std::endl;
-    std::cout << "The perimeter of " << c.getName() << " is: " << c.perimeter() << std::endl;
-
-    // Assuming `Rectangle a` is defined earlier, calculate the distance
-    d = a.distance(c); // Ensure 'a' is defined from the Rectangle testing
-    std::cout << "\nThe distance between rectangle a and circle c is: " << d << std::endl;
-
-    Point curveCutPoint(6, 5); 
-    CurveCut rc(curveCutPoint, "CurveCut rc", 10, 12, 9); 
-    rc.display();
-    std::cout << "The area of " << rc.getName() << " is: " << rc.area() << std::endl;
-    std::cout << "The perimeter of " << rc.getName() << " is: " << rc.perimeter() << std::endl;
-
-    d = rc.distance(c);
-    std::cout << "\nThe distance between rc and c is: " << d << std::endl;
-
-    // Using array of Shape pointers:
-    Shape* shapes[4]; // Ensure shapes array is correctly defined
-    shapes[0] = &s;
-    shapes[1] = &a; // Make sure `a` is defined from Rectangle testing
-    shapes[2] = &c;
-    shapes[3] = &rc;
-
-    for (int i = 0; i < 4; ++i) {
-        shapes[i]->display();
-        std::cout << "\nThe area of " << shapes[i]->getName() << " is: " << shapes[i]->area() << std::endl;
-        std::cout << "The perimeter of " << shapes[i]->getName() << " is: " << shapes[i]->perimeter() << std::endl;
-    }
-
-    std::cout << "\nTesting copy constructor in class CurveCut:" << std::endl;
-    CurveCut cc = rc; // Should call the copy constructor
-    cc.display();
-
-    std::cout << "\nTesting assignment operator in class CurveCut:" << std::endl;
-    CurveCut cc2(curveCutPoint, "CurveCut cc2", 100, 12, 9); 
-    cc2.display();
-    cc2 = cc; // Should call the assignment operator
-    cc2.display();
-    #endif 
-
     #if 1
     cout << "\n\nTesting Functions in class Circle:" << endl;
     Circle c(3, 5, 9, "CIRCLE C");
