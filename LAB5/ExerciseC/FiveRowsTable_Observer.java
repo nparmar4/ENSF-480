@@ -1,3 +1,6 @@
+/*  ENSF 480 Fall 2024
+    Authors: Neha Parmar, Shahed Issa
+ */
 import java.util.ArrayList;
 
 public class FiveRowsTable_Observer implements Observer {
