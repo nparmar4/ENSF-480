@@ -13,7 +13,7 @@ public class ColouredFrameDecorator extends Decorator {
 
     @Override
     public void draw(Graphics g) {
-        super.draw(g); // Call the draw method of the base class to draw the component
+        super.draw(g); 
 
         Graphics2D g2d = (Graphics2D) g;
         Color oldColor = g2d.getColor();
@@ -22,9 +22,8 @@ public class ColouredFrameDecorator extends Decorator {
         BasicStroke oldStroke = (BasicStroke) g2d.getStroke();
         g2d.setStroke(new BasicStroke(thickness));
 
-        g2d.drawRect(x, y, width, height); // Draw the frame
+        g2d.drawRect(x, y, width, height);
 
-        // Restore the original stroke and color
         g2d.setStroke(oldStroke);
         g2d.setColor(oldColor);
     }

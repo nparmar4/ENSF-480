@@ -22,7 +22,7 @@ public class BorderDecorator extends Decorator {
         
         g2d.drawRect(x, y, width, height);
         
-        g2d.setStroke(oldStroke); // Reset stroke to previous setting
-        g2d.setColor(oldColor);    // Reset color to previous setting
+        g2d.setStroke(oldStroke); 
+        g2d.setColor(oldColor);   
     }
 }
